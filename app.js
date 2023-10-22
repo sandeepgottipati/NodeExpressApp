@@ -5,13 +5,13 @@ const bodyParser = require('body-parser');
 const path = require('path')
 
 /*custom packages import */
-const adminRouter = require('./routes/admin')
+const admin = require('./routes/admin')
 const shopRouter = require('./routes/shop')
 /*Entry Point */
 const app = express();
 /*MIDDLE WARES */
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(adminRouter);
+app.use(admin.router);
 app.use(shopRouter);
 
 //configuring static files path
