@@ -1,0 +1,21 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title #{docTitle}
+        link(rel="stylesheet", href="/css/style.css")
+    body
+        header.w-full.bg-orange-300(class="h-[6rem]")
+            nav.flex.p-4.justify-center
+                ul.flex.flex-row.gap-x-6.m-4.justify-center.items-center
+                    li 
+                        a.px-4.py-2.rounded-lg.bg-slate-100.shadow-xl(href="/" class=["hover:border-b border-b-red-400 transition duration-150"]) shop 
+                    li 
+                        a.px-4.py-2.rounded-lg.bg-slate-100.shadow-xl(href="/add-product") products 
+        main.min-h-screen.min-w-full.p-10.bg-neutral-500(class=['sm:p-16'])
+            form.flex.flex-col.space-y-6.flex-wrap.mt-10.mx-auto.p-6.bg-white.shadow-lg.rounded-lg.max-w-lg.items-center(method="post" action="/add-product" )
+                div.w-full 
+                    span.font-normal.text-slate-500.mr-4 Product Name
+                    input.px-2.py-2.rounded-lg.outline-offset-1.outline-solid.outline-slate-500.border-red-400.border-2(class=["hover:outline-offset-2 focus:border-none transition duration-150"] name="title")
+                button.px-4.py-2.bg-amber-200.rounded-lg.shadow-lg.text-white.w-full(type="submit" class=["hover:opacity-50 transition duration-200"]) Add

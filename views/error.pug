@@ -1,0 +1,18 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title #{docTitle}
+        link(rel="stylesheet", href="/css/style.css")
+    body
+        header.w-full.bg-orange-300(class="h-[6rem]")
+            nav.flex.p-4.justify-center
+                ul.flex.flex-row.gap-x-6.m-4.justify-center.items-center
+                    li 
+                        a.px-4.py-2.rounded-lg.bg-slate-100.shadow-xl(href="/" class=["hover:border-b border-b-red-400 transition duration-150"]) shop 
+                    li 
+                        a.px-4.py-2.rounded-lg.bg-slate-100.shadow-xl(href="/add-product") products  
+        main.bg-slate-400.h-full.w-full.flex.justify-center.p-36
+            div.bg-white.shadow-xl.rounded-md(class="h-[28rem] w-[80%]")
+                h1.text-4xl.text-center.mt-16.text-indigo-500.capitalize= error
